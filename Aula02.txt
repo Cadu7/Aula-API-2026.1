@@ -1,0 +1,12 @@
+controller recurso
+    porta de entrada para o nosso sistema
+
+    path
+    methodo get post put delete
+
+    define o response body
+    define status code
+
+
+model
+    classes que usamos como dados, Cliente, ContaBancaria
