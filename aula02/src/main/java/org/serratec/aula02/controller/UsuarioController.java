@@ -40,8 +40,14 @@ public class UsuarioController {
     }
 
     @GetMapping()
-    public ResponseEntity<List<Usuario>> listaUsuarios() {
-        List<Usuario> usuarios = this.usuarioRepository.findAll();
+    public ResponseEntity<List<Usuario>> listaUsuarios(@RequestParam(required = false) String nome) {
+        List<Usuario> usuarios;
+        if (nome == null || nome.isBlank()) {
+            usuarios = this.usuarioRepository.findAll();
+        } else {
+            usuarios = this.usuarioRepository.findByNomeLike(nome);
+        }
+
         return ResponseEntity.status(HttpStatus.OK).body(usuarios);
     }
 
