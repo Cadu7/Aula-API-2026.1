@@ -1,0 +1,5 @@
+org/serratec/aula02/repository/UsuarioRepository.class
+org/serratec/aula02/model/Mensagem.class
+org/serratec/aula02/entity/Usuario.class
+org/serratec/aula02/Aula02Application.class
+org/serratec/aula02/controller/UsuarioController.class

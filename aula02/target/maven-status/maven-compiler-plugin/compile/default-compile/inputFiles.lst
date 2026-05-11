@@ -1,0 +1,5 @@
+/home/cadu/Projetos/Residencia/API/Aula-API-2026.1/aula02/src/main/java/org/serratec/aula02/Aula02Application.java
+/home/cadu/Projetos/Residencia/API/Aula-API-2026.1/aula02/src/main/java/org/serratec/aula02/controller/UsuarioController.java
+/home/cadu/Projetos/Residencia/API/Aula-API-2026.1/aula02/src/main/java/org/serratec/aula02/entity/Usuario.java
+/home/cadu/Projetos/Residencia/API/Aula-API-2026.1/aula02/src/main/java/org/serratec/aula02/model/Mensagem.java
+/home/cadu/Projetos/Residencia/API/Aula-API-2026.1/aula02/src/main/java/org/serratec/aula02/repository/UsuarioRepository.java

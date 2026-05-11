@@ -1,12 +1,39 @@
-controller recurso
-    porta de entrada para o nosso sistema
-
-    path
-    methodo get post put delete
-
-    define o response body
-    define status code
+site para vizualizar o swagger
+    https://editor.swagger.io/
 
 
-model
-    classes que usamos como dados, Cliente, ContaBancaria
+
+entity
+    conter as classes que representam tabelas do banco de dados
+
+repository
+    contem as interfaces que conectam ao banco e rodam o SQL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

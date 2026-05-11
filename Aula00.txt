@@ -1,0 +1,175 @@
+interface API {
+
+    boolean eValido();
+
+}
+
+
+HTTP
+baseado em request e response
+
+
+
+abrir o whatsapp
+escolhe a pessoa
+manda a sua mensagem
+    se ela foi lida
+    horário que mensagem foi enviado
+
+
+HTTP
+request
+recurso alunos
+metodo GET(buscar dados),POST (inserir dados),DELETE(apagar um dado),PUT(atualizar o dado)
+mensagem -> body
+
+response
+status {
+    https://http.dog/
+    https://http.cat/
+}
+mensagem -> body
+
+
+REQUEST
+GET / HTTP/2
+Host: google.com
+User-Agent: curl/8.14.1
+Accept: */*
+
+RESPONSE
+HTTP/2 301
+location: https://www.google.com/
+content-type: text/html; charset=UTF-8
+content-security-policy-report-only: object-src 'none';base-uri 'self';script-src 'nonce-b5H1T81ys6mfIwv1AgYY7g' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+date: Thu, 07 May 2026 23:45:03 GMT
+expires: Sat, 06 Jun 2026 23:45:03 GMT
+cache-control: public, max-age=2592000
+server: gws
+content-length: 220
+x-xss-protection: 0
+x-frame-options: SAMEORIGIN
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="https://www.google.com/">here</A>.
+</BODY></HTML>
+
+
+
+
+
+https://exemplo.com/aluno
+https://exemplo.com/carro
+
+
+
+
+
+public class Usuario {
+
+    String nome;
+    String email;
+
+}
+
+Usuario user = new Usuario();
+user.nome = "Cadu";
+user.email = "cadu@gmail.com"
+
+JSON
+{
+    "nome":"Cadu",
+    "email":"cadu@gmail.com"
+}
+
+XML
+<usuario>
+    <nome>Cadu</nome>
+    <email>cadu@gmail.com</email>
+</usuario>
+
+
+
+
+
+
+
+
+
+
+
+{
+    "matricula": 324,
+    "nome": "João",
+    "telefone": "2234-0989",
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://localhost:8080/alunos/1"
+        }
+    ]
+}
+
+REQUEST
+GET /alunos
+
+200
+{
+    "alunos": [...],
+    "links": [
+        {
+            "rel": "PaginaAtual",
+            "href": "https://localhost:8080/produtos/geladeira/1"
+        },
+        {
+            "rel": "UltimaPagina",
+            "href": "https://localhost:8080/produtos/geladeira/10"
+        }
+        {
+            "rel": "BuscaAlunoPorMatricula",
+            "href": "https://localhost:8080/alunos/porMatricula/{matricula}"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
