@@ -1,0 +1,60 @@
+Anotações
+    org.springframework.web.bind.annotation
+
+    Criação da API, definição do HTTP
+    @RestController -> classes para o spring gerenciar
+    @RequestMapping -> funções que vai ser disponibilizada
+    @GetMapping -> funções que vai ser disponibilizada
+    @PostMapping -> funções que vai ser disponibilizada
+    @PutMapping -> funções que vai ser disponibilizada
+    @DeleteMapping -> funções que vai ser disponibilizada
+    @Repository -> classes para o spring gerenciar
+    @Autowired -> instanciar(new) classes gerenciadas pelo spring
+        new AlunoRepository()
+
+
+    jakarta.persistence JPA faz a conexão com o banco de dados
+
+    transformar a classe java em tabela no banco de dados
+    @Entity -> classes para o hibernate gerenciar
+    @Table -> tb_aluno
+    @Id -> fala que o atributo é a coluna da chave primario no banco
+    @GeneratedValue -> fala que o atribudo do @Id é autoincrementado
+    @Column -> passa as especificações do atributo para o banco
+        NOT NULL
+        UNIQUE
+        VARCHAR(255)
+        name="funcionario_primeiro_nome"
+    funcionarioPrimeiroNome
+
+    jakarta.validation.constraints Faz a validação de classes na API(antes de chegar no seu código java)
+
+    @Valid -> anota no controller e faz as validações serem executadas
+    @NotNull -> verifica se o campo é null
+    @NotBlank -> verifica se o campo é blank "       "
+    @NotEmpty -> verfica se o tamanho da string é 0
+    @Min -> o valor minimo de numeros
+    @Max -> o valor maximo para números
+    @Size -> pode definir tamanho minimo e maximo para as strings
+
+    link com mais algumas anotações de validações do spring
+        https://medium.com/@himani.prasad016/validations-in-spring-boot-e9948aa6286b
+
+
+    lombok Simplifica a criação dos gets, sets, contrutores
+
+    @Setter -> adiciona os set na classe
+    @Getter -> adiciona os get na classe
+    @ToString -> adiciona o to string na classe
+    @Data -> adiciona o get,set e toString na classe de uma só vez
+    @NoArgsConstructor -> adiciona o construtor sem parametros
+    @AllArgsConstructor -> adiciona o construtor com todos os parametros
+
+Git
+    push
+    pull
+    add
+    commit
+    log
+    branch
+    checkout

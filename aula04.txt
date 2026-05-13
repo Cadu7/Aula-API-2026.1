@@ -1,0 +1,11 @@
+controller
+    agora ele vai chamar o service (processar)
+
+service
+   logica para chamar o repository
+   logica de negocio
+
+exception
+    deixar os arquivos relacionados as exeções
+    controller
+    exeções customizadas
