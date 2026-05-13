@@ -1,0 +1,78 @@
+controller
+    @RestController
+    As interfaces que interagem com o HTTP
+    GET /client?
+    ResponseEntity
+
+model
+    Classes que trafegam dados em geral
+    public record Mensagem()
+
+entity
+    @Entity
+    As classes que representam tabelas do banco de dados
+
+repository
+    @Repository
+    Vão ser as classes que fazem interação(SQL) com o banco
+
+
+@Service // vai utilizar
+@Bean
+@Component
+
+
+
+por padrão usa tudo string
+
+para número é string a menos que vc precise fazer calculos
+
+as datas são sempre date
+
+os campos boleanos são boolean
+
+
+
+Anotações
+    org.springframework.web.bind.annotation
+
+    Criação da API, definição do HTTP
+    @RestController -> classes para o spring gerenciar
+    @RequestMapping -> funções que vai ser disponibilizada
+    @GetMapping -> funções que vai ser disponibilizada
+    @PostMapping -> funções que vai ser disponibilizada
+    @PutMapping -> funções que vai ser disponibilizada
+    @DeleteMapping -> funções que vai ser disponibilizada
+    @Repository -> classes para o spring gerenciar
+    @Autowired -> instanciar(new) classes gerenciadas pelo spring
+        new AlunoRepository()
+
+    jakarta.persistence JPA faz a conexão com o banco de dados
+
+    transformar a classe java em tabela no banco de dados
+    @Entity -> classes para o hibernate gerenciar
+    @Table -> tb_aluno
+    @Id -> fala que o atributo é a coluna da chave primario no banco
+    @GeneratedValue -> fala que o atribudo do @Id é autoincrementado
+    @Column -> passa as especificações do atributo para o banco
+        NOT NULL
+        UNIQUE
+        VARCHAR(255)
+        name="funcionario_primeiro_nome"
+    funcionarioPrimeiroNome
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
