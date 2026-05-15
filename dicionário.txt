@@ -26,6 +26,9 @@ Anotações
         VARCHAR(255)
         name="funcionario_primeiro_nome"
     funcionarioPrimeiroNome
+    @Embedded
+    @Embeddable
+    @Enumerated
 
     jakarta.validation.constraints Faz a validação de classes na API(antes de chegar no seu código java)
 
@@ -49,6 +52,10 @@ Anotações
     @Data -> adiciona o get,set e toString na classe de uma só vez
     @NoArgsConstructor -> adiciona o construtor sem parametros
     @AllArgsConstructor -> adiciona o construtor com todos os parametros
+
+    com.fasterxml.jackson
+
+    @JsonCreator
 
 Git
     push

@@ -1,0 +1,25 @@
+tabela cliente
+
+id   nome   cpf  cep   logradouro  complemento
+
+PK
+
+------------ unica tabela
+insert na tabela
+insert index unique
+insert index pk
+
+get tabela cliente
+
+-----------
+insert no cliente
+insert index unique cliente
+insert index pk
+insert index fk
+
+insert endereço
+insert index pk
+
+get tabela cliente
+get tabela endereco
+junção dos dados
