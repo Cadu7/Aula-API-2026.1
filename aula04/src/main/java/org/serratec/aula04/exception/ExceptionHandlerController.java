@@ -1,6 +1,8 @@
 package org.serratec.aula04.exception;
 
+import org.apache.coyote.Response;
 import org.serratec.aula04.model.ErrorMessage;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -18,6 +20,8 @@ import java.lang.reflect.Field;
 import java.time.LocalDateTime;
 import java.util.stream.Collectors;
 
+import static org.springframework.http.HttpStatus.NOT_FOUND;
+
 @ControllerAdvice // que esta classe é gerenciada pelo spring e que retorna as exceões customizadas pro usuário
 public class ExceptionHandlerController extends ResponseEntityExceptionHandler {
 
@@ -29,12 +33,18 @@ public class ExceptionHandlerController extends ResponseEntityExceptionHandler {
                 .stream()
                 .map(i -> i.getField() + " " + i.getDefaultMessage())
                 .collect(Collectors.joining(","));
+//        [{field:"nome", defaultMessage: "campo nulo", ...}, {field: "senha", defaultMessage: "campo nulo",...}] linha 29
+//        ["nome campo nulo", "senha campo nulo"] linha 30
+//        "nome campo nulo,senha campo nulo" linha 31
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ErrorMessage(mensagem, LocalDateTime.now()));
     }
 
     @ExceptionHandler(ProdutoNaoEncontrado.class)
     public ResponseEntity<ErrorMessage> handleProdutoNaoEncontrado(ProdutoNaoEncontrado ex){
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorMessage(ex.getMessage(), LocalDateTime.now()));
+        // catch (ProdutoNaoEncontrado ex) {}
+        ErrorMessage body = new ErrorMessage(ex.getMessage(), LocalDateTime.now());
+
+        return ResponseEntity.status(NOT_FOUND).body(body);
     }
 
 }

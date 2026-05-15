@@ -1,0 +1,6 @@
+
+dto
+    Data transfer object
+
+Usuario entidade @entity que é uma tabela lá no banco de dados
+dto baseados nas entidades, eles vão conter as validoes
